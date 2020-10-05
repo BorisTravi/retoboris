@@ -1,0 +1,8 @@
+FROM python:3.8-slim
+
+ENV CONTAINER_HOME=/var/wwww
+
+ADD . $CONTAINER_HOME
+WORKDIR $CONTAINER_HOME
+
+RUN pip3 install -r $CONTAINER_HOME/requirements.txt
